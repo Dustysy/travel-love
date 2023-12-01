@@ -1,17 +1,20 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
+  padding: 20px;
 
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
   color: $color-default-white;
 
-  background-color: $color-neon-blue;
+  background-color: $color-navy-blue;
   border: none;
   cursor: pointer;
 
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  &--text {
+    background-color: $color-elephant;
   }
 
   &:disabled {
