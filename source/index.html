@@ -15,13 +15,58 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container">
-          <a class="page-header__logo-link" href="#">
-            <img src="./img/logo.svg" width="142" height="42" alt="LifeTour. Организвция походов в горы">
-          </a>
-        </div>
-      </header>
+      <div data-test="header">
+        <header class="page-header" data-header="">
+          <div class="container">
+            <button class="page-header__toggle" type="button" data-burger="">
+              <svg width="26" height="26">
+                <use href="./img/sprite.svg#menu"></use>
+              </svg>
+
+              <svg width="26" height="26">
+                <use href="./img/sprite.svg#cross"></use>
+              </svg>
+            </button>
+
+            <a class="page-header__logo-link" href="#">
+              <svg width="142" height="42">
+                <use href="./img/sprite.svg#logo"></use>
+              </svg>
+              <span class="visually-hidden">LifeTour. Организация походов в горы</span>
+            </a>
+
+            <nav class="page-header__nav page-nav">
+            <ul class="page-nav__list">
+              <li class="page-nav__item">
+                <a class="page-nav__link" href="#">Туры</a>
+              </li>
+
+              <li class="page-nav__item">
+                <a class="page-nav__link" href="#">Обучение</a>
+              </li>
+
+              <li class="page-nav__item">
+                <a class="page-nav__link" href="#">О нас</a>
+              </li>
+
+              <li class="page-nav__item">
+                <a class="page-nav__link" href="#">Отзывы</a>
+              </li>
+
+              <li class="page-nav__item">
+                <a class="page-nav__link" href="#">Фотографии</a>
+              </li>
+
+              <li class="page-nav__item">
+                <a class="page-nav__link" href="#">Контакты</a>
+              </li>
+            </ul>
+            </nav>
+
+            <a class="page-header__tel" href="tel:88007253232">8 800 725-32-32</a>
+          </div>
+        </header>
+      </div>
       <main>
         <section class="intro">
           <div class="container">
