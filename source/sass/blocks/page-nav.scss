@@ -1,0 +1,63 @@
+.page-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 760px;
+  margin: 0;
+  padding: 0 40px;
+  list-style: none;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.page-nav__link {
+  position: relative;
+
+  @include font-face(16px, 16px, 14px, 14px, 14px, 14px);
+  font-family: $ff-montserrat;
+  color: $color-default-white;
+  text-decoration: none;
+  user-select: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%);
+
+    height: 1px;
+    width: calc(100% + 10px);
+    display: none;
+
+    background-color: $color-default-white;
+  }
+
+  @include hover {
+    &::after {
+      display: flex;
+    }
+  }
+
+  @include focus {
+    outline: none;
+
+    &::after {
+      display: flex;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: calc(100% + 4px);
+
+      background-color: transparent;
+      border: 1px solid $color-default-white;
+    }
+  }
+
+  @include disabled {
+    cursor: default;
+  }
+}
+

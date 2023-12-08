@@ -21,6 +21,16 @@
 @import "blocks/btn";
 @import "blocks/custom-input";
 
+// Layout
+// ---------------------------------
+
+@import "blocks/page-header";
+@import "blocks/page-nav";
+@import "blocks/hero";
+@import "blocks/tour";
+@import "blocks/labels";
+@import "blocks/pagination";
+
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
