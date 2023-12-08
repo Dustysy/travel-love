@@ -1,0 +1,35 @@
+.labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.labels__item {
+  position: relative;
+  padding: 13px 19px 13px 39px;
+  border: 1px solid rgba($color-default-white, 0.5);
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--time {
+    &::before {
+      background-image: url("../img/sprite.svg#moon");
+    }
+  }
+
+  &--level {
+    &::before {
+      background-image: url("../../../img/sprite.svg#level");
+    }
+  }
+}
+

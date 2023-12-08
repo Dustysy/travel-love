@@ -19,6 +19,7 @@
   font-family: $ff-montserrat;
   color: $color-default-white;
   text-decoration: none;
+  user-select: none;
 
   &::after {
     content: "";
