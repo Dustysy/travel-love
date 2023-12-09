@@ -22,19 +22,24 @@
 }
 
 @mixin active {
-  &.focus-visible:active:not(:disabled) {
+  &:active:not(.focus-visible),
+  :active:not(:disabled) {
     @content;
   }
 }
 
 @mixin hover-focus {
   @media (hover: hover) {
-    &:hover:not(.focus-visible) {
+    &:hover:not(.focus-visible),
+    &:hover:not(:disabled) {
       @content;
     }
   }
 
-  &.focus-visible:focus {
+  &.focus-visible:focus,
+  &.focus-visible:not(:disabled),
+  &:focus-visible,
+  &:focus {
     @content;
   }
 }

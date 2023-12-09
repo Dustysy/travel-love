@@ -1,7 +1,8 @@
 .tour {
   position: relative;
   z-index: 1;
-  padding: 274px 0 80px;
+  min-height: 800px;
+  padding: 200px 20px 80px;
 }
 
 .tour__container {
@@ -39,7 +40,7 @@
 }
 
 .tour__text-wrapper p {
-  max-width: 420px;
+  max-width: 464px;
   margin: 0 0 35px;
 
   @include font-face(17px, 24px, 17px, 24px, 17px, 24px);
@@ -55,14 +56,32 @@
 
 .tour__button {
   display: inline-flex;
-  margin: 0 0 134px;
-  padding: 20px;
+  margin: 0 0 135px;
+  padding: 19px;
 
   background-color: $color-navy-blue;
   color: $color-default-white;
-  border: none;
-  border-radius: 6px;
+  border: 1px solid $color-navy-blue;
   user-select: none;
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    border-color: $color-resolution-blue;
+    border-radius: 6px;
+    color: $color-resolution-blue;
+    outline: none;
+  }
+
+  @include active {
+    color: $color-default-white;
+    border-radius: 6px;
+    border-color: $color-resolution-blue;
+    background-color: $color-resolution-blue;
+  }
+
+  @include disabled {
+    background-color: #999999;
+  }
 }
 
 .tour__labels {

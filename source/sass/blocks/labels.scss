@@ -15,20 +15,23 @@
   &::before {
     content: "";
     position: absolute;
-    left: 8px;
+    left: 20px;
     top: 50%;
+    height: 12px;
+    width: 12px;
     transform: translateY(-50%);
+    background-size: 12px;
   }
 
   &--time {
     &::before {
-      background-image: url("../img/sprite.svg#moon");
+      background-image: url("../../img/svg/moon.svg");
     }
   }
 
   &--level {
     &::before {
-      background-image: url("../../../img/sprite.svg#level");
+      background-image: url("../../img/svg/level.svg");
     }
   }
 }

@@ -1,45 +1,29 @@
 import Swiper from '../vendor/swiper';
 
-const sliderHero = document.querySelector('[data-hero-swiper="swiper"]');
-const sliderHeroPagination = document.querySelector('[data-hero-swiper="pagination"]');
+const swiperHero = document.querySelector('[data-hero-swiper="swiper"]');
+const swiperHeroPagination = document.querySelector('[data-hero-swiper="pagination"]');
 
 const  initHeroSwiper = () => {
-  new window.Swiper(sliderHero, {
+  new Swiper(swiperHero, {
     pagination: {
-      el: sliderHeroPagination,
+      el: swiperHeroPagination,
+      type: 'bullets',
       clickable: true,
     },
+
     loop: true,
     centeredSlides: true,
     slidesPerView: 1,
     spaceBetween: 0,
+
+    breakpoint: {
+      1024: {
+        // swipeHandler: false,
+        // allowTouchMove: true,
+      },
+    },
   });
 };
-
-
-// const  = () => {
-//   new Swiper('[data-hero-swiper="swiper"]', {
-//     navigation: {
-//       el:'[data-hero-swiper="pagination"]',
-//       type: 'bullets',
-//       clickable: true,
-//     },
-
-//     slidesPerView: 1,
-//     loop: true,
-//     allowTouchMove: false,
-//     centeredSlides: true,
-//     centeredSlidesBounds: true,
-//     spaceBetween: 0,
-//     // swipeHandler: '[data-hero-swiper="pagination"]',
-
-//     breakpoints: {
-//       768: {
-//         allowTouchMove: true,
-//       },
-//     },
-//   });
-// };
 
 export { initHeroSwiper };
 
