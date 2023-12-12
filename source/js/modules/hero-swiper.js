@@ -16,10 +16,9 @@ const  initHeroSwiper = () => {
     slidesPerView: 1,
     spaceBetween: 0,
 
-    breakpoint: {
-      1024: {
-        // swipeHandler: false,
-        // allowTouchMove: true,
+    breakpoints: {
+      1200: {
+        allowTouchMove: false,
       },
     },
   });

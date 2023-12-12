@@ -5,6 +5,7 @@ export class Burger {
   constructor() {
     this._header = document.querySelector('[data-header]');
     this._burger = document.querySelector('[data-burger]');
+    this._body = document.body;
     this._scrollLock = scrollLock;
     this._focusLock = new FocusLock();
     this._isMenuOpen = false;
@@ -25,6 +26,7 @@ export class Burger {
   _openMenu() {
     this._isMenuOpen = true;
     this._header.classList.add('is-open');
+    this._body.classList.add('is-open');
     this._scrollLock.disablePageScroll();
     document.addEventListener('keydown', this._onDocumentKeydown);
     document.addEventListener('click', this._onDocumentClick);
@@ -37,6 +39,7 @@ export class Burger {
   _closeMenu() {
     this._isMenuOpen = false;
     this._header.classList.remove('is-open');
+    this._body.classList.remove('is-open');
     this._scrollLock.enablePageScroll();
     this._focusLock.unlock('[data-header]');
     document.removeEventListener('keydown', this._onDocumentKeydown);

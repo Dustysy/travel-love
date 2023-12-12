@@ -23,8 +23,8 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  max-width: 760px;
+  justify-content: space-between;
+  width: 652px;
   margin: 0;
   padding: 0 40px;
   list-style: none;

@@ -14,7 +14,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  padding: 32px 20px;
+  padding: 40px 20px 36px 52px;
 
   background-color: $color-navy-blue;
   color: $color-default-white;
@@ -67,6 +67,7 @@
 }
 
 .page-header__logo-link {
+  margin: 2px 0 0;
   color: $color-default-white;
 
   @include hover-focus {
@@ -90,6 +91,10 @@
     transform: none;
     margin: 0 0 14px auto;
   }
+}
+
+.page-header__nav {
+  margin: -3px 0 0 30px;
 }
 
 .page-header__tel {
@@ -138,6 +143,7 @@
   }
 
   .page-header__logo-link {
+    margin: 2px 0 0;
     color: $color-elephant;
 
     @include hover-focus {
