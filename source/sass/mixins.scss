@@ -53,12 +53,6 @@
 
 // Desktop first
 
-@mixin vp-1439 {
-  @media (max-width: ($vp-1440 - 1px)) {
-    @content;
-  }
-}
-
 @mixin vp-1023 {
   @media (max-width: ($vp-1024 - 1px)) {
     @content;
@@ -75,11 +69,6 @@
 @mixin font-face($fz, $lh, $fz-tablet, $lh-tablet, $fz-mobile, $lh-mobile) {
   font-size: $fz;
   line-height: $lh;
-
-  @include vp-1439 {
-    font-size: $fz-tablet;
-    line-height: $lh-tablet;
-  }
 
   @include vp-1023 {
     font-size: $fz-tablet;
